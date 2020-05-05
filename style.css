@@ -1,0 +1,77 @@
+#envelope-body {
+    width: 600px;
+    height: 300px;
+    box-sizing: border-box;
+    border: 5px solid #800;
+    border-radius: 5px;
+    position: absolute;
+    background-color: #EED;
+    top: 300px;
+    left: 450px;
+    z-index: 3;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 128;
+}
+
+@keyframes envelope-polygon-rotate {
+    from {
+        transform: translateY(0) rotateX(180deg);
+        top: 101px;
+    }
+
+    to {
+        transform: translateY(200px) rotateX(180deg);
+        top: -300px;
+    }
+}
+
+#envelope-polygon {
+    animation-name: envelope-polygon-rotate;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-play-state: running;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    border-top: 200px solid #EED;
+    border-bottom: 200px solid transparent;
+    border-left: 300px solid transparent;
+    border-right: 300px solid transparent;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 101px;
+    left: 450px;
+    z-index: 1;
+}
+
+@keyframes letter {
+    from {
+        top: 300px;
+    }
+
+    50% {
+        transform: rotateZ(1deg);
+    }
+
+    to {
+        top: 80px;
+        transform: rotateZ(10deg);
+    }
+}
+
+#letter {
+    animation-name: letter;
+    animation-duration: 2s;
+    animation-delay: 3s;
+    animation-timing-function: linear;
+    animation-play-state: running;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 300px;
+    z-index: 2;
+    left: 650;
+}
